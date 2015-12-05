@@ -263,7 +263,7 @@ filterOutChildren get_thing xs
 
 #if __GLASGOW_HASKELL__ >= 708
 pprInfo :: (HscTypes.TyThing, GHC.Fixity, [GHC.ClsInst], [GHC.FamInst]) -> Outputable.SDoc
-pprInfo (thing, fixity, insts, _) =
+pprInfo (thing, fixity, insts, fams) =
     PprTyThing.pprTyThingInContextLoc thing
 #elif __GLASGOW_HASKELL__ >= 706
 pprInfo :: PprTyThing.PrintExplicitForalls -> (HscTypes.TyThing, GHC.Fixity, [GHC.ClsInst]) -> Outputable.SDoc
